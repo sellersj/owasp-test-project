@@ -26,7 +26,8 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <version>${project.version}</version>
-      <scope>test</scope>
+      <!-- if this has a test jar that is incorrectly scoped as compile (same as other artifact) it will cause a DependencyNotFoundException -->
+      <!-- <scope>test</scope> -->
     </dependency>
     <dependency>
       <groupId>junit</groupId>
