@@ -2,9 +2,9 @@
 
 This is for testing a multi-module app that has a test jar
 
-Note: this seems to work okay
+This seems to fail when a module depends on another for both it's regular source as well as it's test jar.
 
-To check, this can be run like
+Example command to check if it will work
 ```
 mvn -X -B org.owasp:dependency-check-maven:6.4.1:check org.owasp:dependency-check-maven:6.4.1:aggregate 
   -Dformat=ALL -DskipProvidedScope=true -DautoUpdate=false -DnuspecAnalyzerEnabled=false 
